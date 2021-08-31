@@ -1,0 +1,21 @@
+{
+  "name": "fast-delivery-back",
+  "version": "1.0.0",
+  "license": "MIT",
+  "engines": {
+    "node": "16.x",
+    "yarn": "1.x"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js"
+  },
+  "dependencies": {
+    "@prisma/client": "2.29.1",
+    "express": "4.17.1",
+    "prisma": "2.29.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
