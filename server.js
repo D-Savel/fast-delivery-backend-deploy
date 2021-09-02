@@ -5,7 +5,7 @@ const express = require('express')
 const cors = require('cors')
 
 const LOG_FILE = 'logs/access-log.txt'
-const PORT = 3333
+const port = process.env.PORT || 3333
 
 const prisma = new PrismaClient()
 const app = express()
@@ -99,7 +99,6 @@ app.post('/addressforxy', async (req, res) => {
     })
 })
 
-// eslint-disable-next-line no-unused-vars
-const server = app.listen(PORT, () =>
-  console.log(`server ready at: http://localhost:${PORT}`),
+app.listen(port, () =>
+  console.log(`server ready at: http://localhost:${port}`),
 )
