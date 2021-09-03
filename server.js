@@ -64,7 +64,7 @@ app.get('/address', async (req, res) => {
   let addressQuery = address1.join('%')
 
   const main = async () => {
-    const results = await prisma.$queryRaw`SELECT id,adresse,x,y FROM db_75 WHERE adresse ILIKE ${addressQuery} AND numero ILIKE ${streetNumber} ORDER BY numero LIMIT 25;`
+    const results = await prisma.$queryRaw`SELECT id,adresse,lon,lat FROM db_75 WHERE adresse ILIKE ${addressQuery} AND numero ILIKE ${streetNumber} ORDER BY numero LIMIT 25;`
     console.log(results)
     console.log(results.length)
     res.json(results)
@@ -85,7 +85,7 @@ app.post('/addressforxy', async (req, res) => {
   console.log(y, 'y')
 
   const main = async () => {
-    const results = await prisma.$queryRaw`SELECT adresse FROM db_75 WHERE x = ${x} AND y = ${y};`
+    const results = await prisma.$queryRaw`SELECT adresse FROM db_75 WHERE lon = ${x} AND lat = ${y};`
     console.log(results)
     res.json(results)
   }
