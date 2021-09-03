@@ -16,7 +16,7 @@
     "prisma": "2.29.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.12",
-    "cors": "^2.8.5"
+    "cors": "^2.8.5",
+    "nodemon": "^2.0.12"
   }
 }
