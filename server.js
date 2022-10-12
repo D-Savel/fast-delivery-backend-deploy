@@ -51,8 +51,8 @@ app.use(logger)
 app.use(shower)
 
 let transporter = nodemailer.createTransport({
-  host: 'smtp.mailtrap.io',
-  port: 2525,
+  host: 'smtp.ethereal.email',
+  port: 587,
   auth: {
     user: process.env.MAIL_USER,
     pass: process.env.MAIL_PASS
