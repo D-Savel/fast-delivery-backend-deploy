@@ -52,17 +52,12 @@ app.use(shower)
 
 let transporter = nodemailer.createTransport({
   host: 'smtp.mailtrap.io',
-  port: 465,
+  port: 2525,
   secure: true,
   auth: {
-    type: "login", // default
     user: process.env.MAIL_USER,
     pass: process.env.MAIL_PASS
   },
-  tls: {
-    // do not fail on invalid certs
-    rejectUnauthorized: false
-  }
 });
 
 
